@@ -11,13 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
-    //  @Input()  name: string = "Angular 2 on Express";
     function AppComponent() {
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             templateUrl: './app.component.html',
+            styleUrls: ['./app.component.css']
         }),
         __metadata("design:paramtypes", [])
     ], AppComponent);

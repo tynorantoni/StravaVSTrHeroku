@@ -11,6 +11,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var about_component_1 = require("./components/about/about.component");
+var bikeManager_component_1 = require("./components/bikeManager/bikeManager.component");
 var footer_component_1 = require("./components/footer/footer.component");
 var header_component_1 = require("./components/header/header.component");
 var routes_1 = require("./routes");
@@ -35,7 +36,8 @@ var AppModule = /** @class */ (function () {
                 header_component_1.HeaderComponent,
                 footer_component_1.FooterComponent,
                 strava_component_1.StravaComponent,
-                metar_component_1.MetarComponent
+                metar_component_1.MetarComponent,
+                bikeManager_component_1.BikeManagerComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         })

@@ -1,10 +1,11 @@
+import { AppComponent } from "./app.component";
 import { Route, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 
 export const routes: Route[] = [
-    { path: '', pathMatch: 'full', component: HomeComponent },
+    { path: '', pathMatch: 'full', component: AppComponent },
     { path: 'about', component: AboutComponent }
 ];
 

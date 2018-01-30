@@ -10,10 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var MetarComponent = /** @class */ (function () {
-    function MetarComponent(http) {
+    function MetarComponent() {
     }
     MetarComponent = __decorate([
         core_1.Component({
@@ -21,7 +20,7 @@ var MetarComponent = /** @class */ (function () {
             templateUrl: 'components/metar/metar.component.html',
             styleUrls: ['components/metar/metar.component.css']
         }),
-        __metadata("design:paramtypes", [http_1.Http])
+        __metadata("design:paramtypes", [])
     ], MetarComponent);
     return MetarComponent;
 }());

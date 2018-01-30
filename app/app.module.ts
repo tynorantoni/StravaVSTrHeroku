@@ -4,6 +4,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { AboutComponent } from "./components/about/about.component";
+import { BikeManagerComponent } from "./components/bikeManager/bikeManager.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { routing } from "./routes";
@@ -25,7 +26,8 @@ import { StravaComponent } from "./components/strava/strava.component";
         HeaderComponent,
         FooterComponent,
         StravaComponent,
-        MetarComponent
+        MetarComponent,
+        BikeManagerComponent
     ],
     bootstrap: [ AppComponent ]
 })
