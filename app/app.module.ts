@@ -1,15 +1,16 @@
+import { AppRoutingModule } from "./app-routing-module";
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
-import { AboutComponent } from "./components/about/about.component";
 import { BikeManagerComponent } from "./components/bikeManager/bikeManager.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { HeaderComponent } from "./components/header/header.component";
-import { routing } from "./routes";
-import { HomeComponent } from "./components/home/home.component";
+
+import { AboutComponent } from "./components/about/about.component";
 import { MetarComponent } from "./components/metar/metar.component";
+import { PageNotFoundComponent } from "./components/pageNotFound/page-not-found.component";
 import { StravaComponent } from "./components/strava/strava.component";
 
 @NgModule({
@@ -17,18 +18,18 @@ import { StravaComponent } from "./components/strava/strava.component";
         BrowserModule,
         HttpModule,
         JsonpModule,
-        routing,
+        AppRoutingModule,
        
     ],
     declarations: [
         AppComponent,
-//        AboutComponent,
-//        HomeComponent,
+        AboutComponent,
         HeaderComponent,
         FooterComponent,
         StravaComponent,
         MetarComponent,
-        BikeManagerComponent
+        BikeManagerComponent,
+        PageNotFoundComponent
     ],
     bootstrap: [ AppComponent ]
 })

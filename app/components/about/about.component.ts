@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Http } from "@angular/http";
+import 'rxjs/add/operator/map';
 
 @Component({
-    selector: 'my-about',
+    selector: 'about-component',
     templateUrl: 'components/about/about.component.html',
     styleUrls: ['components/about/about.component.css']
 })
 export class AboutComponent {
-  
+
     constructor() {}
 }

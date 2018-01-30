@@ -10,12 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+require("rxjs/add/operator/map");
 var AboutComponent = /** @class */ (function () {
     function AboutComponent() {
     }
     AboutComponent = __decorate([
         core_1.Component({
-            selector: 'my-about',
+            selector: 'about-component',
             templateUrl: 'components/about/about.component.html',
             styleUrls: ['components/about/about.component.css']
         }),
