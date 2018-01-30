@@ -4,8 +4,12 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
 import { AboutComponent } from "./components/about/about.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { HeaderComponent } from "./components/header/header.component";
 import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
+import { MetarComponent } from "./components/metar/metar.component";
+import { StravaComponent } from "./components/strava/strava.component";
 
 @NgModule({
     imports: [
@@ -17,7 +21,11 @@ import { HomeComponent } from "./components/home/home.component";
     declarations: [
         AppComponent,
         AboutComponent,
-        HomeComponent
+        HomeComponent,
+        HeaderComponent,
+        FooterComponent,
+        StravaComponent,
+        MetarComponent
     ],
     bootstrap: [ AppComponent ]
 })

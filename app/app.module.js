@@ -11,8 +11,12 @@ var platform_browser_1 = require("@angular/platform-browser");
 var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var about_component_1 = require("./components/about/about.component");
+var footer_component_1 = require("./components/footer/footer.component");
+var header_component_1 = require("./components/header/header.component");
 var routes_1 = require("./routes");
 var home_component_1 = require("./components/home/home.component");
+var metar_component_1 = require("./components/metar/metar.component");
+var strava_component_1 = require("./components/strava/strava.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,7 +31,11 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 about_component_1.AboutComponent,
-                home_component_1.HomeComponent
+                home_component_1.HomeComponent,
+                header_component_1.HeaderComponent,
+                footer_component_1.FooterComponent,
+                strava_component_1.StravaComponent,
+                metar_component_1.MetarComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         })
