@@ -5,7 +5,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 
 export const routes: Route[] = [
-    { path: '', pathMatch: 'full', component: AppComponent },
+    { path: '', pathMatch: 'full', component: HomeComponent },
     { path: 'about', component: AboutComponent }
 ];
 
