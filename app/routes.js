@@ -1,11 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var app_component_1 = require("./app.component");
 var router_1 = require("@angular/router");
-var home_component_1 = require("./components/home/home.component");
-var about_component_1 = require("./components/about/about.component");
+//import { HomeComponent } from './components/home/home.component';
+//import { AboutComponent } from './components/about/about.component';
 exports.routes = [
-    { path: '', pathMatch: 'full', component: home_component_1.HomeComponent },
-    { path: 'about', component: about_component_1.AboutComponent }
+    { path: '', pathMatch: 'full', component: app_component_1.AppComponent },
 ];
 exports.routing = router_1.RouterModule.forRoot(exports.routes, { useHash: true });
 //# sourceMappingURL=routes.js.map

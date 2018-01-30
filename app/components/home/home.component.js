@@ -10,15 +10,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(http) {
-        var _this = this;
-        this.name = "Home page";
-        http.get("/users")
-            .map(function (data) { return data.json(); })
-            .subscribe(function (data) { return _this.users = data; });
+    function HomeComponent() {
     }
     HomeComponent = __decorate([
         core_1.Component({
@@ -26,7 +20,7 @@ var HomeComponent = /** @class */ (function () {
             templateUrl: 'components/home/home.component.html',
             styleUrls: ['components/home/home.component.css']
         }),
-        __metadata("design:paramtypes", [http_1.Http])
+        __metadata("design:paramtypes", [])
     ], HomeComponent);
     return HomeComponent;
 }());

@@ -17,12 +17,13 @@ import { StravaComponent } from "./components/strava/strava.component";
         BrowserModule,
         HttpModule,
         JsonpModule,
-        routing
+        routing,
+       
     ],
     declarations: [
         AppComponent,
-        AboutComponent,
-        HomeComponent,
+//        AboutComponent,
+//        HomeComponent,
         HeaderComponent,
         FooterComponent,
         StravaComponent,
