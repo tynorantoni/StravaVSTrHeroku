@@ -5,27 +5,38 @@ import { MetarComponent } from "./components/metar/metar.component";
 import { PageNotFoundComponent } from "./components/pageNotFound/page-not-found.component";
 import {NgModule} from '@angular/core';
 
-import {RouterModule, Routes} from '@angular/router';
+import {RouterModule, Routes, Route} from '@angular/router';
 
 
 
-const appRoutes: Routes = [
-  {path: '', component: AppComponent},
+export const routes: Route[] = [
+    {path: '', component: AppComponent},
   {path: 'bikemanager', component: BikeManagerComponent},
   {path: 'about', component: AboutComponent},
   {path: 'not-found', component: PageNotFoundComponent},
   {path: '**', redirectTo: '/not-found'}
 ];
 
-@NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes)
-  ],
-  exports: [
-    RouterModule
-  ]
-})
-export class AppRoutingModule {
+export const routing = RouterModule.forRoot(routes, { useHash: true });
 
 
-}
+//const appRoutes: Routes = [
+//  {path: '', component: AppComponent},
+//  {path: 'bikemanager', component: BikeManagerComponent},
+//  {path: 'about', component: AboutComponent},
+//  {path: 'not-found', component: PageNotFoundComponent},
+//  {path: '**', redirectTo: '/not-found'}
+//];
+//
+//@NgModule({
+//  imports: [
+//    RouterModule.forRoot(appRoutes)
+//  ],
+//  exports: [
+//    RouterModule
+//  ]
+//})
+//export class AppRoutingModule {
+//
+//
+//}

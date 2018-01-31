@@ -1,4 +1,5 @@
-import { AppRoutingModule } from "./app-routing-module";
+
+import { routing } from "./app-routing-module";
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
@@ -18,7 +19,7 @@ import { StravaComponent } from "./components/strava/strava.component";
         BrowserModule,
         HttpModule,
         JsonpModule,
-        AppRoutingModule,
+        routing
        
     ],
     declarations: [

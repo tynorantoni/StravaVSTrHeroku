@@ -27,7 +27,7 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 http_1.HttpModule,
                 http_1.JsonpModule,
-                app_routing_module_1.AppRoutingModule,
+                app_routing_module_1.routing
             ],
             declarations: [
                 app_component_1.AppComponent,
