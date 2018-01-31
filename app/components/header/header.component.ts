@@ -1,5 +1,5 @@
 import {Component, Output, EventEmitter} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'header-component',
@@ -25,8 +25,7 @@ export class HeaderComponent {
     this.selectedElement = element;
   }
 
-  constructor() {
-  }
+   constructor() {}
 
   ngOnInit() {
   }

@@ -16,7 +16,7 @@ if (app.get('env') !== 'production') {
 
   options.index = "index.dev.html";
 
-  // expose node_modules to client app
+//   expose node_modules to client app
   app.use(express.static(__dirname + "/node_modules"));
 }
 
@@ -28,6 +28,7 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public'), options));
 app.use(express.static(path.join(__dirname, 'app')));
+
 
 
 

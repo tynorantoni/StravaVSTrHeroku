@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
+import { Router, ActivatedRoute } from "@angular/router";
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -9,5 +10,5 @@ import 'rxjs/add/operator/map';
 })
 export class AboutComponent {
 
-    constructor() {}
-}
+     constructor() {}
+  }

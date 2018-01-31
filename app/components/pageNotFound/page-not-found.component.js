@@ -10,18 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
 var PageNotFoundComponent = /** @class */ (function () {
-    function PageNotFoundComponent(http) {
+    function PageNotFoundComponent() {
     }
     PageNotFoundComponent = __decorate([
         core_1.Component({
             selector: 'page-not-found-component',
-            templateUrl: 'component/pageNotFound/page-not-found.component.html',
+            templateUrl: 'components/pageNotFound/page-not-found.component.html',
             styleUrls: ['components/pageNotFound/page-not-found.component.css']
         }),
-        __metadata("design:paramtypes", [http_1.Http])
+        __metadata("design:paramtypes", [])
     ], PageNotFoundComponent);
     return PageNotFoundComponent;
 }());

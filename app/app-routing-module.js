@@ -14,8 +14,8 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var appRoutes = [
     { path: '', component: app_component_1.AppComponent },
-    { path: '/bikemanager', component: bikeManager_component_1.BikeManagerComponent },
-    { path: '/about', component: about_component_1.AboutComponent },
+    { path: 'bikemanager', component: bikeManager_component_1.BikeManagerComponent },
+    { path: 'about', component: about_component_1.AboutComponent },
     { path: 'not-found', component: page_not_found_component_1.PageNotFoundComponent },
     { path: '**', redirectTo: '/not-found' }
 ];
@@ -25,7 +25,7 @@ var AppRoutingModule = /** @class */ (function () {
     AppRoutingModule = __decorate([
         core_1.NgModule({
             imports: [
-                router_1.RouterModule.forRoot(appRoutes, { useHash: false })
+                router_1.RouterModule.forRoot(appRoutes)
             ],
             exports: [
                 router_1.RouterModule

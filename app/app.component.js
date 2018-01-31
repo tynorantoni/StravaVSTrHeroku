@@ -10,8 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
+    function AppComponent(router, route) {
+        this.router = router;
+        this.route = route;
     }
     AppComponent = __decorate([
         core_1.Component({
@@ -19,7 +22,8 @@ var AppComponent = /** @class */ (function () {
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.css']
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [router_1.Router,
+            router_1.ActivatedRoute])
     ], AppComponent);
     return AppComponent;
 }());
