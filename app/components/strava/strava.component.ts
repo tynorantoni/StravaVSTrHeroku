@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from "@angular/http";
+import { Router, ActivatedRoute } from "@angular/router";
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -8,5 +9,5 @@ import 'rxjs/add/operator/map';
     styleUrls: ['components/strava/strava.component.css']
 })
 export class StravaComponent {
-    constructor(http: Http) {}
+    constructor() {}
 }

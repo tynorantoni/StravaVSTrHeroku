@@ -10,25 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-var HomeComponent = /** @class */ (function () {
-    function HomeComponent(http) {
-        var _this = this;
-        this.name = "Home page";
-        http.get("/users")
-            .map(function (data) { return data.json(); })
-            .subscribe(function (data) { return _this.users = data; });
+var PageNotFoundComponent = /** @class */ (function () {
+    function PageNotFoundComponent() {
     }
-    HomeComponent = __decorate([
+    PageNotFoundComponent = __decorate([
         core_1.Component({
-            selector: 'my-home',
-            templateUrl: 'components/home/home.component.html',
-            styleUrls: ['components/home/home.component.css']
+            selector: 'page-not-found-component',
+            templateUrl: 'components/pageNotFound/page-not-found.component.html',
+            styleUrls: ['components/pageNotFound/page-not-found.component.css']
         }),
-        __metadata("design:paramtypes", [http_1.Http])
-    ], HomeComponent);
-    return HomeComponent;
+        __metadata("design:paramtypes", [])
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=page-not-found.component.js.map

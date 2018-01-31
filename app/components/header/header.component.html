@@ -1,4 +1,7 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-secondary fixed-top">
+
+
+<nav class="navbar navbar-expand-xl navbar-dark bg-secondary sticky-top ">
+
 	<div class="container-fluid">
 
 		<a class="navbar-brand" href="#" (click)="menuSelected('default')">Bike
@@ -9,22 +12,33 @@
 			aria-label="Toggle navigation" (click)="toggleCollapsed()">
 			<span class="navbar-toggler-icon "></span>
 		</button>
+
 	</div>
-	<div id="navbarSupportedContent "
-		[ngClass]="{ 'collapse': collapsed, 'navbar-collapse': true} ">
+	<div class="col-xl-4">
+		<div id="navbarSupportedContent "
+			[ngClass]="{ 'collapse': collapsed, 'navbar-collapse': true} ">
 
-		<ul class="nav nav-tabs">
+			<ul class="nav nav-pills">
 
+				<li class="nav-item" routerLinkActive="active"><a
+					routerLink="">Home</a></li>
+				<li class="nav-item" routerLinkActive="active"><a
+					routerLink="bikemanager">Bike Manager</a></li>
+				<li role="presentation" routerLinkActive="active"><a
+					routerLink="about">About</a></li>
+				<!-- 
 			<li class="nav-item active "><a class="nav-link " href="# "
-				(click)="menuSelected('default') ">Start <span class="sr-only ">(current)</span>
-			</a></li>
-			<li class="nav-item "><a class="nav-link " href="# "
 				(click)="menuSelected('contact') ">Strava-vs-Trafficar</a></li>
 			<li class="nav-item "><a class="nav-link " href="# "
 				(click)="menuSelected('contact') ">Bike Manager</a></li>
 			<li class="nav-item "><a class="nav-link " href="# "
-				(click)="menuSelected('contact') ">Kontakt</a></li>
-		</ul>
+				(click)="menuSelected('contact') ">About</a></li>
+				- -->
+			</ul>
+		</div>
 	</div>
 
 </nav>
+<router-outlet></router-outlet>
+
+
