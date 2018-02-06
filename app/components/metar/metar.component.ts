@@ -19,8 +19,9 @@ export class MetarComponent implements OnInit {
   
   ngOnInit(){
     this.metarServ.getAll().subscribe(data=>{
-      this.metar = data;
+      this.metar = JSON.stringify(data);
     });
+   
   }
   
 }

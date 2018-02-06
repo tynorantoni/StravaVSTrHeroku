@@ -9,7 +9,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var app_routing_module_1 = require("./app-routing-module");
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var http_1 = require("@angular/http");
+//import {JsonpModule } from '@angular/http';
 var app_component_1 = require("./app.component");
 var bikeManager_component_1 = require("./components/bikeManager/bikeManager.component");
 var footer_component_1 = require("./components/footer/footer.component");
@@ -19,7 +19,7 @@ var metar_component_1 = require("./components/metar/metar.component");
 var page_not_found_component_1 = require("./components/pageNotFound/page-not-found.component");
 var strava_component_1 = require("./components/strava/strava.component");
 var metar_service_1 = require("./metar.service");
-var http_2 = require("@angular/common/http");
+var http_1 = require("@angular/common/http");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,8 +27,8 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [
                 platform_browser_1.BrowserModule,
-                http_2.HttpClientModule,
-                http_1.JsonpModule,
+                http_1.HttpClientModule,
+                //        JsonpModule,
                 app_routing_module_1.routing
             ],
             declarations: [

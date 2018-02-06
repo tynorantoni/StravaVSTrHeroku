@@ -19,7 +19,7 @@ var MetarComponent = /** @class */ (function () {
     MetarComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.metarServ.getAll().subscribe(function (data) {
-            _this.metar = data;
+            _this.metar = JSON.stringify(data);
         });
     };
     MetarComponent = __decorate([

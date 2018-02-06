@@ -16,7 +16,7 @@ var MetarService = /** @class */ (function () {
         this.http = http;
     }
     MetarService.prototype.getAll = function () {
-        return this.http.get('localhost:8080/api/krk2');
+        return this.http.get('http://stvstr.herokuapp.com/api/krk2');
     };
     MetarService = __decorate([
         core_1.Injectable(),
