@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import { Http } from "@angular/http";
+import { MetarService } from "../../metar.service";
+import { Component, OnInit } from '@angular/core';
+import { Observable } from "rxjs";
+
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -7,7 +9,19 @@ import 'rxjs/add/operator/map';
     templateUrl: 'components/metar/metar.component.html',
     styleUrls: ['components/metar/metar.component.css']
 })
-export class MetarComponent {
-    
-     constructor() {}
+export class MetarComponent implements OnInit {
+  
+  metar: String;
+  
+  
+
+     constructor(private metarServ: MetarService) {}
+  
+  ngOnInit(){
+    this.metarServ.getAll().subscribe(data=>{
+      this.metar = JSON.stringify(data);
+    });
+   
+  }
+  
 }

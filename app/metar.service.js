@@ -9,28 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var metar_service_1 = require("../../metar.service");
+var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
-require("rxjs/add/operator/map");
-var MetarComponent = /** @class */ (function () {
-    function MetarComponent(metarServ) {
-        this.metarServ = metarServ;
+var MetarService = /** @class */ (function () {
+    function MetarService(http) {
+        this.http = http;
     }
-    MetarComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this.metarServ.getAll().subscribe(function (data) {
-            _this.metar = JSON.stringify(data);
-        });
+    MetarService.prototype.getAll = function () {
+        return this.http.get('http://stvstr.herokuapp.com/api/krk2');
     };
-    MetarComponent = __decorate([
-        core_1.Component({
-            selector: 'metar-component',
-            templateUrl: 'components/metar/metar.component.html',
-            styleUrls: ['components/metar/metar.component.css']
-        }),
-        __metadata("design:paramtypes", [metar_service_1.MetarService])
-    ], MetarComponent);
-    return MetarComponent;
+    MetarService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.HttpClient])
+    ], MetarService);
+    return MetarService;
 }());
-exports.MetarComponent = MetarComponent;
-//# sourceMappingURL=metar.component.js.map
+exports.MetarService = MetarService;
+//# sourceMappingURL=metar.service.js.map
