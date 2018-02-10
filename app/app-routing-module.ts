@@ -14,30 +14,10 @@ export const routes: Route[] = [
     {path: '', component: StravaComponent},
   {path: 'bikemanager', component: BikeManagerComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'not-found', component: PageNotFoundComponent},
-  {path: '**', redirectTo: '/not-found'}
+  {path: '404', component: PageNotFoundComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 
 export const routing = RouterModule.forRoot(routes, { useHash: false });
 
 
-//const appRoutes: Routes = [
-//  {path: '', component: AppComponent},
-//  {path: 'bikemanager', component: BikeManagerComponent},
-//  {path: 'about', component: AboutComponent},
-//  {path: 'not-found', component: PageNotFoundComponent},
-//  {path: '**', redirectTo: '/not-found'}
-//];
-//
-//@NgModule({
-//  imports: [
-//    RouterModule.forRoot(appRoutes)
-//  ],
-//  exports: [
-//    RouterModule
-//  ]
-//})
-//export class AppRoutingModule {
-//
-//
-//}
