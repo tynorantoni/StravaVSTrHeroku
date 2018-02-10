@@ -1,44 +1,57 @@
 
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
 
-<nav class="navbar navbar-expand-xl navbar-dark bg-secondary sticky-top ">
+			<nav
+				class="navbar navbar-expand-xl navbar-dark bg-secondary sticky-top ">
 
-	<div class="container-fluid">
+				<div class="container-fluid">
 
-		<a class="navbar-brand" href="#" (click)="menuSelected('default')">Bike
-			App</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false"
-			aria-label="Toggle navigation" (click)="toggleCollapsed()">
-			<span class="navbar-toggler-icon "></span>
-		</button>
+					<a class="navbar-brand" (click)="menuSelected('default')" routerLink="">Bike
+						App</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent"
+						aria-controls="navbarSupportedContent" aria-expanded="false"
+						aria-label="Toggle navigation" (click)="toggleCollapsed()">
+						<span class="navbar-toggler-icon "></span>
+					</button>
 
-	</div>
-	<div class="col-xl-4">
-		<div id="navbarSupportedContent "
-			[ngClass]="{ 'collapse': collapsed, 'navbar-collapse': true} ">
+				</div>
+				<div class="col-md-4">
+					<div id="navbarSupportedContent "
+						[ngClass]="{ 'collapse': collapsed, 'navbar-collapse': true} ">
 
-			<ul class="nav nav-pills">
 
-				<li class="nav-item" routerLinkActive="active"><a
-					routerLink="">Home</a></li>
-				<li class="nav-item" routerLinkActive="active"><a
-					routerLink="bikemanager">Bike Manager</a></li>
-				<li role="presentation" routerLinkActive="active"><a
-					routerLink="about">About</a></li>
-				<!-- 
-			<li class="nav-item active "><a class="nav-link " href="# "
-				(click)="menuSelected('contact') ">Strava-vs-Trafficar</a></li>
-			<li class="nav-item "><a class="nav-link " href="# "
-				(click)="menuSelected('contact') ">Bike Manager</a></li>
-			<li class="nav-item "><a class="nav-link " href="# "
-				(click)="menuSelected('contact') ">About</a></li>
-				- -->
-			</ul>
+						<ul class="nav nav-pills nav-fill">
+							<li class="nav-item"><a class="nav-link"
+								role="presentation" routerLinkActive="active"
+								[routerLinkActiveOptions]="{exact: true}" routerLink="">Home</a></li>
+							<li class="nav-item"><a class="nav-link"
+								role="presentation" routerLinkActive="active"
+								routerLink="bikemanager">Bike Manager</a></li>
+							<li class="nav-item"><a class="nav-link"
+								role="presentation" routerLinkActive="active" routerLink="about">About</a></li>
+						</ul>
+
+						<!-- 	<ul class="nav nav-tabs ">
+
+							<li class="nav-item" role="presentation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a
+								routerLink="">Home</a></li>
+							<li class="nav-item" routerLinkActive="active"><a
+								routerLink="bikemanager">Bike Manager</a></li>
+							<li role="presentation" routerLinkActive="active"><a
+								routerLink="about">About</a></li>
+						
+						</ul>-->
+					</div>
+				</div>
+			</nav>
 		</div>
 	</div>
-
-</nav>
+</div>
+<br>
+<br>
 <router-outlet></router-outlet>
 
 
