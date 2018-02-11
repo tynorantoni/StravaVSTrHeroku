@@ -1,6 +1,6 @@
 import { StravaService } from "../../strava.service";
 import { StravaUserModule } from "./stravaUser.module";
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Http } from "@angular/http";
 import { Router, ActivatedRoute } from "@angular/router";
 import 'rxjs/add/operator/map';
@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
     templateUrl: 'components/strava/strava.component.html',
     styleUrls: ['components/strava/strava.component.css']
 })
-export class StravaComponent implements OnInit {
+export class StravaComponent implements OnInit, OnChanges {
   
   stravaUserJson: string;
   objUser:StravaUserModule;
@@ -18,8 +18,8 @@ export class StravaComponent implements OnInit {
   stravaBikeJson: string;
   objBike:StravaUserModule;
   
-//  stravaActivitiesJson: string;
-//  objActivities:StravaUserModule;
+  stravaActivitiesJson: string;
+  objActivities:StravaUserModule;
   
   
     constructor(private stravaServ: StravaService) {}
@@ -35,12 +35,14 @@ export class StravaComponent implements OnInit {
       this.objBike = JSON.parse(this.stravaBikeJson);
     });
     
-//     this.stravaServ.getActivities().subscribe(data=>{
-//      this.stravaActivitiesJson = JSON.stringify(data);
-//      this.objActivities = JSON.parse(this.stravaActivitiesJson);
-//    });
+     this.stravaServ.getActivities().subscribe(data=>{
+      this.stravaActivitiesJson = JSON.stringify(data);
+      this.objActivities = JSON.parse(this.stravaActivitiesJson);
+    });
    
   }
-  
+  ngOnChanges(){
+    this.ngOnInit();
+  }
   
 }

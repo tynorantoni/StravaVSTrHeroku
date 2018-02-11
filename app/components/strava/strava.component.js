@@ -13,8 +13,6 @@ var strava_service_1 = require("../../strava.service");
 var core_1 = require("@angular/core");
 require("rxjs/add/operator/map");
 var StravaComponent = /** @class */ (function () {
-    //  stravaActivitiesJson: string;
-    //  objActivities:StravaUserModule;
     function StravaComponent(stravaServ) {
         this.stravaServ = stravaServ;
     }
@@ -28,10 +26,13 @@ var StravaComponent = /** @class */ (function () {
             _this.stravaBikeJson = JSON.stringify(data);
             _this.objBike = JSON.parse(_this.stravaBikeJson);
         });
-        //     this.stravaServ.getActivities().subscribe(data=>{
-        //      this.stravaActivitiesJson = JSON.stringify(data);
-        //      this.objActivities = JSON.parse(this.stravaActivitiesJson);
-        //    });
+        this.stravaServ.getActivities().subscribe(function (data) {
+            _this.stravaActivitiesJson = JSON.stringify(data);
+            _this.objActivities = JSON.parse(_this.stravaActivitiesJson);
+        });
+    };
+    StravaComponent.prototype.ngOnChanges = function () {
+        this.ngOnInit();
     };
     StravaComponent = __decorate([
         core_1.Component({

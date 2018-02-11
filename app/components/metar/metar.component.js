@@ -23,6 +23,9 @@ var MetarComponent = /** @class */ (function () {
             _this.obj = JSON.parse(_this.json);
         });
     };
+    MetarComponent.prototype.ngOnChanges = function () {
+        this.ngOnInit();
+    };
     MetarComponent = __decorate([
         core_1.Component({
             selector: 'metar-component',
