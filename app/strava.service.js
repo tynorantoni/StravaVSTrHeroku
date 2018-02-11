@@ -11,21 +11,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
-var MetarService = /** @class */ (function () {
-    function MetarService(http) {
+var StravaService = /** @class */ (function () {
+    function StravaService(http) {
         this.http = http;
     }
-    MetarService.prototype.getMetar = function () {
-        return this.http.get('https://stvstr.herokuapp.com/api/metar');
+    StravaService.prototype.getUser = function () {
+        return this.http.get('https://stvstr.herokuapp.com/api/strava/user/get');
     };
-    MetarService.prototype.getMetarDecoded = function () {
-        return this.http.get('https://stvstr.herokuapp.com/api/metar/decoded');
+    StravaService.prototype.getBike = function () {
+        return this.http.get('https://stvstr.herokuapp.com/api/strava/bike/get');
     };
-    MetarService = __decorate([
+    StravaService.prototype.getActivities = function () {
+        return this.http.get('https://stvstr.herokuapp.com/api/strava/activities/get');
+    };
+    StravaService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.HttpClient])
-    ], MetarService);
-    return MetarService;
+    ], StravaService);
+    return StravaService;
 }());
-exports.MetarService = MetarService;
-//# sourceMappingURL=metar.service.js.map
+exports.StravaService = StravaService;
+//# sourceMappingURL=strava.service.js.map

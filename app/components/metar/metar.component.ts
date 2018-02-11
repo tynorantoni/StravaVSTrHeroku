@@ -1,27 +1,29 @@
-import { MetarService } from "../../metar.service";
-import { Component, OnInit } from '@angular/core';
-import { Observable } from "rxjs";
+import {MetarService} from "../../metar.service";
+import {MetarModule} from "./metar.module";
+import {Component, OnInit} from '@angular/core';
+import {Observable} from "rxjs";
 
 import 'rxjs/add/operator/map';
 
 @Component({
-    selector: 'metar-component',
-    templateUrl: 'components/metar/metar.component.html',
-    styleUrls: ['components/metar/metar.component.css']
+  selector: 'metar-component',
+  templateUrl: 'components/metar/metar.component.html',
+  styleUrls: ['components/metar/metar.component.css']
 })
 export class MetarComponent implements OnInit {
-  
-  metar: String;
-  
-  
 
-     constructor(private metarServ: MetarService) {}
-  
-  ngOnInit(){
-    this.metarServ.getAll().subscribe(data=>{
-      this.metar = JSON.stringify(data);
+  json: string;
+  obj: MetarModule;
+
+
+  constructor(private metarServ: MetarService) {}
+
+  ngOnInit() {
+    this.metarServ.getMetarDecoded().subscribe(data => {
+      this.json = JSON.stringify(data);
+      this.obj = JSON.parse(this.json);
     });
-   
+
   }
-  
+
 }

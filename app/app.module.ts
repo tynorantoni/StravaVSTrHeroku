@@ -11,10 +11,13 @@ import { HeaderComponent } from "./components/header/header.component";
 
 import { AboutComponent } from "./components/about/about.component";
 import { MetarComponent } from "./components/metar/metar.component";
+
 import { PageNotFoundComponent } from "./components/pageNotFound/page-not-found.component";
 import { StravaComponent } from "./components/strava/strava.component";
 
+
 import { MetarService } from "./metar.service";
+import { StravaService } from "./strava.service";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http" ;
 
@@ -36,9 +39,10 @@ import { HttpClientModule } from "@angular/common/http" ;
         StravaComponent,
         MetarComponent,
         BikeManagerComponent,
-        PageNotFoundComponent
+        PageNotFoundComponent,
+       
     ],
-    providers: [MetarService],
+    providers: [MetarService, StravaService],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

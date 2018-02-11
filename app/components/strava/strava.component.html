@@ -6,7 +6,9 @@
 				<div class="card">
 					<div class="card-body">
 						<h4 class="card-title">Total Distance</h4>
-						<p class="card-text">Congrats! You have already traveled xyz km.</p>
+						<p class="card-text">Hi {{objUser.firstname}}! "
+						<p class="card-text">Congrats! You have already traveled {{objBike.distance}} km since {{objUser.created_at|date}}</p>
+						
 					</div>
 				</div>
 				<div class="card">

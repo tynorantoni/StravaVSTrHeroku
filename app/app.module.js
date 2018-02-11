@@ -19,6 +19,7 @@ var metar_component_1 = require("./components/metar/metar.component");
 var page_not_found_component_1 = require("./components/pageNotFound/page-not-found.component");
 var strava_component_1 = require("./components/strava/strava.component");
 var metar_service_1 = require("./metar.service");
+var strava_service_1 = require("./strava.service");
 var http_1 = require("@angular/common/http");
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -39,9 +40,9 @@ var AppModule = /** @class */ (function () {
                 strava_component_1.StravaComponent,
                 metar_component_1.MetarComponent,
                 bikeManager_component_1.BikeManagerComponent,
-                page_not_found_component_1.PageNotFoundComponent
+                page_not_found_component_1.PageNotFoundComponent,
             ],
-            providers: [metar_service_1.MetarService],
+            providers: [metar_service_1.MetarService, strava_service_1.StravaService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

@@ -6,9 +6,14 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class MetarService {
   
+  
+  
   constructor(private http: HttpClient) {
   }
-  getAll(): Observable<any> {
-    return this.http.get('https://stvstr.herokuapp.com/api/krk2');
+  getMetar(): Observable<any> {
+    return this.http.get('https://stvstr.herokuapp.com/api/metar');
+  }
+  getMetarDecoded(): Observable<any> {
+    return this.http.get('https://stvstr.herokuapp.com/api/metar/decoded');
   }
 }
